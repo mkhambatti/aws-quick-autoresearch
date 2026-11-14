@@ -1,0 +1,14 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "duckdb_threads": 2,
+  "duckdb_memory_limit": "1GB",
+  "packages": {
+    "duckdb": "2.0.0",
+    "sqlglot": "30.31.0",
+    "boto3": "1.44.2",
+    "mcp": "1.29.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.2.0"
+  }
+}
