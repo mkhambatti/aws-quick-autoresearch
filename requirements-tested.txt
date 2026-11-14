@@ -1,0 +1,9 @@
+# Main dependency versions used for the included Linux/Python 3.12.14 benchmark.
+# Install with: .venv/bin/python -m pip install --only-binary=:all: -r requirements-tested.txt
+# This is not a full transitive lockfile.
+duckdb==2.0.0
+sqlglot==30.31.0
+matplotlib==3.10.8
+mcp==1.29.0
+boto3==1.44.2
+pytest==9.2.0

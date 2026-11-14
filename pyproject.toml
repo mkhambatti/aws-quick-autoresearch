@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quick-query-autoresearch"
+version = "0.1.0"
+description = "Measured query optimization with an immutable answer checker and Quick MCP tools"
+requires-python = ">=3.11,<3.14"
+dependencies = ["duckdb>=1.4,<3", "sqlglot>=28,<31", "matplotlib>=3.9,<4", "mcp>=1.12,<2", "boto3>=1.35,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+quick-query = "quick_query.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["quick_query*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
