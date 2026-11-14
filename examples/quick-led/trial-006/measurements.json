@@ -1,0 +1,1442 @@
+[
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.001267166000616271,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009599580007488839,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009296669959439896,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009203329973388463,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008481670010951348,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0011913749985978939,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009572919952915981,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009789169998839498,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009527080037514679,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008630000011180528,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009587919994373806,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009561670012772083,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0010078749983222224,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009402080031577498,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008196670023608021,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007153749975259416,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005548330009332858,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007150000019464642,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006753339985152707,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005692079939763062,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006268750003073364,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005730420016334392,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006070419985917397,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006175829985295422,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005435829953057691,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006197089969646186,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005628750004689209,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005958750043646432,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005484580033225939,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005299999975250103,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006272919999901205,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005775419995188713,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007426250012940727,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000636166994809173,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005996250038151629,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006716670031892136,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000574958001379855,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006207080004969612,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006334589998004958,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005315410016919486,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000629250003839843,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005560830031754449,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006287500000325963,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005571660003624856,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005489589966600761,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009472919991821982,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.001181458996143192,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009547499939799309,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009081669995794073,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008158749988069758,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009370000043418258,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009470420045545325,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.001003999997919891,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009105829958571121,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007927499973447993,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009211670039803721,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009565000000293367,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009233329983544536,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009964580021915026,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008317500032717362,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000949542001762893,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009934579938999377,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009506249989499338,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009322089972556569,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007989590012584813,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009037920026457869,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008641669992357492,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000945624997257255,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009155830048257485,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008590840006945655,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009942499964381568,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009274589974666014,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009503749970463105,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009092910040635616,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008042920017032884,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "candidate"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007173750054789707,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005600000004051253,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006049590010661632,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006485419944510795,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005581669975072145,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000631666996923741,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000541749999683816,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006030829972587526,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008206249985960312,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005912910055485554,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006558340028277598,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005622079988825135,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005967079996480606,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.00055429100029869,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "incumbent"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005706669981009327,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "incumbent"
+  }
+]
