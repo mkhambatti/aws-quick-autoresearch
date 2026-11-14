@@ -1,0 +1,25 @@
+{
+  "name": "Synthetic orders starter",
+  "queries": {
+    "totals": "SELECT category, COUNT(*) AS orders, COUNT(amount_cents) AS priced_orders, SUM(amount_cents) AS amount_cents, SUM(returned) AS returns FROM data WHERE region = {{region}} GROUP BY category"
+  },
+  "train_cases": [
+    {
+      "region": "US"
+    },
+    {
+      "region": "CA"
+    }
+  ],
+  "test_cases": [
+    {
+      "region": "GB"
+    },
+    {
+      "region": "DE"
+    },
+    {
+      "region": "NO_MATCH"
+    }
+  ]
+}

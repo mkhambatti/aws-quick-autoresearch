@@ -1,0 +1,10 @@
+{
+  "hypothesis": "Read reusable regional category totals instead of scanning individual orders.",
+  "materialize": {
+    "sql": "SELECT region, category, COUNT(*) AS orders, COUNT(amount_cents) AS priced_orders, SUM(amount_cents) AS amount_cents, SUM(returned) AS returns FROM data GROUP BY region, category",
+    "compression": "zstd"
+  },
+  "queries": {
+    "totals": "SELECT category, orders, priced_orders, amount_cents, returns FROM cache WHERE region = {{region}}"
+  }
+}

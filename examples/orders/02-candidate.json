@@ -1,0 +1,7 @@
+{
+  "hypothesis": "Negative control: dropping returned orders must change the answers and be rejected.",
+  "materialize": null,
+  "queries": {
+    "totals": "SELECT category, COUNT(*) AS orders, COUNT(amount_cents) AS priced_orders, SUM(amount_cents) AS amount_cents, SUM(returned) AS returns FROM data WHERE returned = 0 AND region = {{region}} GROUP BY category"
+  }
+}
