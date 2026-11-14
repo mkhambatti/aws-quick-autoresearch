@@ -1,0 +1,15 @@
+{
+  "hypothesis": "Uncompressed sorted aggregate with larger 65536-row groups: fewer row-group headers to process per query.",
+  "queries": {
+    "routes": "SELECT Dest AS dimension, SUM(flights) AS flights, SUM(observed_arrivals) AS observed_arrivals,\n    SUM(arrival_delay_minutes) AS arrival_delay_minutes, SUM(delayed_flights) AS delayed_flights,\n    SUM(cancellations) AS cancellations, SUM(diversions) AS diversions FROM cache WHERE Month = {{month}} AND Origin = {{origin}} GROUP BY Dest",
+    "carriers": "SELECT UniqueCarrier AS dimension, SUM(flights) AS flights, SUM(observed_arrivals) AS observed_arrivals,\n    SUM(arrival_delay_minutes) AS arrival_delay_minutes, SUM(delayed_flights) AS delayed_flights,\n    SUM(cancellations) AS cancellations, SUM(diversions) AS diversions FROM cache WHERE Month = {{month}} AND Origin = {{origin}} GROUP BY UniqueCarrier",
+    "departure_hours": "SELECT dep_hour AS dimension, SUM(flights) AS flights, SUM(observed_arrivals) AS observed_arrivals,\n    SUM(arrival_delay_minutes) AS arrival_delay_minutes, SUM(delayed_flights) AS delayed_flights,\n    SUM(cancellations) AS cancellations, SUM(diversions) AS diversions FROM cache WHERE Month = {{month}} AND Origin = {{origin}} GROUP BY dep_hour",
+    "weekdays": "SELECT DayOfWeek AS dimension, SUM(flights) AS flights, SUM(observed_arrivals) AS observed_arrivals,\n    SUM(arrival_delay_minutes) AS arrival_delay_minutes, SUM(delayed_flights) AS delayed_flights,\n    SUM(cancellations) AS cancellations, SUM(diversions) AS diversions FROM cache WHERE Month = {{month}} AND Origin = {{origin}} GROUP BY DayOfWeek",
+    "national_carriers": "SELECT UniqueCarrier AS dimension, SUM(flights) AS flights, SUM(observed_arrivals) AS observed_arrivals,\n    SUM(arrival_delay_minutes) AS arrival_delay_minutes, SUM(delayed_flights) AS delayed_flights,\n    SUM(cancellations) AS cancellations, SUM(diversions) AS diversions FROM cache WHERE Month = {{month}} GROUP BY UniqueCarrier"
+  },
+  "materialize": {
+    "sql": "SELECT Month, Origin, Dest, UniqueCarrier, FLOOR(CRSDepTime / 100.0) AS dep_hour, DayOfWeek,\n COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals, SUM(ArrDelay) AS arrival_delay_minutes,\n SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM data GROUP BY Month, Origin, Dest, UniqueCarrier, FLOOR(CRSDepTime / 100.0), DayOfWeek ORDER BY Month, Origin",
+    "compression": "uncompressed",
+    "row_group_size": 65536
+  }
+}
