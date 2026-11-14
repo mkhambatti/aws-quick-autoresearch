@@ -1,0 +1,12 @@
+{
+  "run_id": "query-20261112-204646-e020aa",
+  "planner": "predefined example proposals, executed and measured; not an LLM-discovered benchmark",
+  "training_cases": 3,
+  "queries_per_case": 5,
+  "final_cases": 4,
+  "repeats": 3,
+  "minimum_gain": 0.03,
+  "spent_seconds": 522.3459813169998,
+  "fixture": "full real 2008 CSV",
+  "status": "sealed and final verification passed"
+}

@@ -1,0 +1,47 @@
+{
+  "correct_on_final_cases": true,
+  "winner_trial": 6,
+  "test_cases": 4,
+  "queries_per_case": 5,
+  "baseline_seconds": 30.29996431499967,
+  "winner_seconds": 0.10895264000009774,
+  "speedup": 278.10215810257085,
+  "reduction_pct": 99.64041990654702,
+  "setup_seconds": 3.1773200710001674,
+  "break_even_test_workloads": 1,
+  "baseline_samples": [
+    {
+      "seconds": 30.29996431499967,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    },
+    {
+      "seconds": 29.484303944999965,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    },
+    {
+      "seconds": 30.483701821999375,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    }
+  ],
+  "winner_samples": [
+    {
+      "seconds": 0.10895264000009774,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    },
+    {
+      "seconds": 0.08958983099955731,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    },
+    {
+      "seconds": 0.11287347300049078,
+      "bytes_scanned": null,
+      "estimated_scan_usd": null
+    }
+  ],
+  "note": "Exact answers on finite unseen parameter cases, not a proof of SQL equivalence. Warm-cache benchmark; no statistical significance claim. Setup and research costs excluded from steady-state timing."
+}

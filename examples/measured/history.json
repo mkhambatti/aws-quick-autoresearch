@@ -1,0 +1,382 @@
+[
+  {
+    "trial": 0,
+    "hypothesis": "Baseline: unchanged source and dashboard SQL",
+    "status": "kept",
+    "score": 22.431851349,
+    "running_best": 22.431851349,
+    "samples": [
+      {
+        "seconds": 22.351135788999954,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.47615810100001,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.431851349,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "setup": {
+      "seconds": 0,
+      "storage_bytes": 0
+    },
+    "directory": "trial-000",
+    "correct": true
+  },
+  {
+    "trial": 1,
+    "hypothesis": "Rewrite month equality as a range; test whether the optimizer already handles it.",
+    "status": "discarded",
+    "score": 22.188168440000027,
+    "running_best": 22.431851349,
+    "directory": "trial-001",
+    "correct": true,
+    "setup": {
+      "seconds": 0.0,
+      "storage_bytes": 0
+    },
+    "samples": [
+      {
+        "seconds": 22.41568926800028,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.02682682300042,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.188168440000027,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 22.37907405799956,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.496214638000083,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 22.150245650999523,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 22.37907405799956
+  },
+  {
+    "trial": 2,
+    "hypothesis": "Project nine required columns into uncompressed Parquet; avoid repeatedly parsing the original CSV.",
+    "status": "kept",
+    "score": 0.10914898500050185,
+    "running_best": 0.10914898500050185,
+    "directory": "trial-002",
+    "correct": true,
+    "setup": {
+      "seconds": 2.5009220399999776,
+      "storage_bytes": 28296243
+    },
+    "samples": [
+      {
+        "seconds": 0.13065444800008663,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.1002120480004578,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.10914898500050185,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 22.320415191999928,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 23.476067859000295,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 25.548638373999665,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 23.476067859000295
+  },
+  {
+    "trial": 3,
+    "hypothesis": "Project nine required columns into zstd Parquet; avoid repeatedly parsing the original CSV.",
+    "status": "discarded",
+    "score": 0.12151732000052107,
+    "running_best": 0.10914898500050185,
+    "directory": "trial-003",
+    "correct": true,
+    "setup": {
+      "seconds": 3.031623967000087,
+      "storage_bytes": 14608589
+    },
+    "samples": [
+      {
+        "seconds": 0.12940062400025454,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.12151732000052107,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.10667379199981042,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.09295464300021195,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.09037832100034393,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.10256333899951642,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.09295464300021195
+  },
+  {
+    "trial": 4,
+    "hypothesis": "Sort Parquet by month and origin so selective dashboard filters can skip row groups.",
+    "status": "discarded",
+    "score": 0.1984345639998537,
+    "running_best": 0.10914898500050185,
+    "directory": "trial-004",
+    "correct": true,
+    "setup": {
+      "seconds": 4.60366766900006,
+      "storage_bytes": 25179447
+    },
+    "samples": [
+      {
+        "seconds": 0.1894094080000741,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.1984345639998537,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.20871503599983043,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.08964043000014499,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.24678161599968007,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.1009047059999375,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.1009047059999375
+  },
+  {
+    "trial": 5,
+    "hypothesis": "Pre-aggregate reusable counts and sums; preserve dimensions needed by every dashboard query.",
+    "status": "discarded",
+    "score": 0.11391160699986358,
+    "running_best": 0.10914898500050185,
+    "directory": "trial-005",
+    "correct": true,
+    "setup": {
+      "seconds": 3.0659903830000985,
+      "storage_bytes": 7477690
+    },
+    "samples": [
+      {
+        "seconds": 0.19373106700027165,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.08907672100053787,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.11391160699986358,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.11024908099989261,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.08879992599963771,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.08733040100014478,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.08879992599963771
+  },
+  {
+    "trial": 6,
+    "hypothesis": "Sort the aggregate by month and origin with smaller row groups.",
+    "status": "kept",
+    "score": 0.0728991189998851,
+    "running_best": 0.0728991189998851,
+    "directory": "trial-006",
+    "correct": true,
+    "setup": {
+      "seconds": 3.1773200710001674,
+      "storage_bytes": 8311445
+    },
+    "samples": [
+      {
+        "seconds": 0.08083538400001089,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.0728991189998851,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.07191119399954005,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.09800378099907903,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.08969180799954302,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.1822459859997707,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.09800378099907903
+  },
+  {
+    "trial": 7,
+    "hypothesis": "Try snappy on the sorted aggregate: lower decompression CPU may outweigh extra bytes.",
+    "status": "discarded",
+    "score": 0.07434173600040594,
+    "running_best": 0.0728991189998851,
+    "directory": "trial-007",
+    "correct": true,
+    "setup": {
+      "seconds": 3.2640748310000163,
+      "storage_bytes": 10068445
+    },
+    "samples": [
+      {
+        "seconds": 0.07434173600040594,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.07303003200036073,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.08388860800027942,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.06956865699930859,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.0695403250003892,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.07240986499959945,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.06956865699930859
+  },
+  {
+    "trial": 8,
+    "hypothesis": "Negative control: drop cancelled flights to save work. Must be rejected because answers change.",
+    "status": "rejected",
+    "score": null,
+    "running_best": 0.0728991189998851,
+    "directory": "trial-008",
+    "correct": false,
+    "setup": {
+      "seconds": 3.278345579000188,
+      "storage_bytes": 10172643
+    },
+    "error": "ValueError: Answer mismatch in routes, case 0; candidate rejected"
+  }
+]
