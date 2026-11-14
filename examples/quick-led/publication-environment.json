@@ -1,0 +1,13 @@
+{
+  "system": "Darwin",
+  "release": "25.6.0",
+  "machine": "arm64",
+  "python": "3.12.16",
+  "packages": {
+    "duckdb": "2.0.0",
+    "sqlglot": "30.31.0",
+    "matplotlib": "3.10.8",
+    "mcp": "1.29.0",
+    "boto3": "1.44.2"
+  }
+}

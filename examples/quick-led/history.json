@@ -1,0 +1,416 @@
+[
+  {
+    "trial": 0,
+    "hypothesis": "Baseline: unchanged source and dashboard SQL",
+    "status": "kept",
+    "score": 14.38427445799607,
+    "running_best": 14.38427445799607,
+    "samples": [
+      {
+        "seconds": 14.379434458984178,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 14.38427445799607,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 14.456281375998515,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "setup": {
+      "seconds": 0,
+      "storage_bytes": 0
+    },
+    "directory": "trial-000",
+    "correct": true
+  },
+  {
+    "trial": 1,
+    "hypothesis": "Pre-aggregate exact counts/sums by all dashboard dimensions, sorted by Month, Origin, small row groups; queries re-sum the small table.",
+    "status": "kept",
+    "score": 0.04417791899322765,
+    "running_best": 0.04417791899322765,
+    "directory": "trial-001",
+    "correct": true,
+    "setup": {
+      "seconds": 1.6366690830036532,
+      "storage_bytes": 8302033
+    },
+    "samples": [
+      {
+        "seconds": 0.04539350000413833,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.04196874900662806,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.04417791899322765,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 14.76329641600023,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 14.71931574998598,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 14.871023043000605,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 14.76329641600023
+  },
+  {
+    "trial": 2,
+    "hypothesis": "Same sorted aggregate but uncompressed: the 8 MB table is tiny, so skipping zstd decode may cut CPU.",
+    "status": "kept",
+    "score": 0.0393851260014344,
+    "running_best": 0.0393851260014344,
+    "directory": "trial-002",
+    "correct": true,
+    "setup": {
+      "seconds": 1.5892361660007737,
+      "storage_bytes": 11552701
+    },
+    "samples": [
+      {
+        "seconds": 0.0364074589961092,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.0458207089905045,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.0393851260014344,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.056719831030932255,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.04159895701013738,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.04243862599832937,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.04243862599832937
+  },
+  {
+    "trial": 3,
+    "hypothesis": "Uncompressed sorted aggregate with larger 65536-row groups: fewer row-group headers to process per query.",
+    "status": "kept",
+    "score": 0.019274916994618252,
+    "running_best": 0.019274916994618252,
+    "directory": "trial-003",
+    "correct": true,
+    "setup": {
+      "seconds": 1.638880833001167,
+      "storage_bytes": 11065141
+    },
+    "samples": [
+      {
+        "seconds": 0.019762292024097405,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.01921166699321475,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.019274916994618252,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.037924124000710435,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.036509752011625096,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.03635787699749926,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.036509752011625096
+  },
+  {
+    "trial": 4,
+    "hypothesis": "Bigger row groups helped; push to 262144 rows so the uncompressed aggregate is just a few row groups.",
+    "status": "discarded",
+    "score": 0.03511062400502851,
+    "running_best": 0.019274916994618252,
+    "directory": "trial-004",
+    "correct": true,
+    "setup": {
+      "seconds": 1.6035314589971676,
+      "storage_bytes": 11157611
+    },
+    "samples": [
+      {
+        "seconds": 0.03216366600827314,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.07047708399477415,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.03511062400502851,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.026302293008484412,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.02769991599052446,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.03251216399075929,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.02769991599052446
+  },
+  {
+    "trial": 5,
+    "hypothesis": "Per-panel pre-aggregates (UNION ALL tagged by kind), sorted by kind/Month/Origin: each query reads a few already-final rows, no re-aggregation.",
+    "status": "kept",
+    "score": 0.009295623989601154,
+    "running_best": 0.009295623989601154,
+    "directory": "trial-005",
+    "correct": true,
+    "setup": {
+      "seconds": 5.117151249993185,
+      "storage_bytes": 1740685
+    },
+    "samples": [
+      {
+        "seconds": 0.009295623989601154,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.009085791985853575,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.00930683600017801,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.02002974999777507,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.01917949801281793,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.019216461005271412,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.019216461005271412
+  },
+  {
+    "trial": 6,
+    "hypothesis": "Per-panel table is only 1.7 MB; 4096-row groups let kind/Month/Origin min-max stats skip almost everything.",
+    "status": "discarded",
+    "score": 0.014028125995537266,
+    "running_best": 0.009295623989601154,
+    "directory": "trial-006",
+    "correct": true,
+    "setup": {
+      "seconds": 5.063727458000358,
+      "storage_bytes": 3186371
+    },
+    "samples": [
+      {
+        "seconds": 0.014551291998941451,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.014028125995537266,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.013698710994503926,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.009054791989910882,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.00913579201005632,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.009217166996677406,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.00913579201005632
+  },
+  {
+    "trial": 7,
+    "hypothesis": "Per-panel table in one big row group (1M rows): smaller groups hurt, so minimize row-group overhead.",
+    "status": "discarded",
+    "score": 0.01053821001551114,
+    "running_best": 0.009295623989601154,
+    "directory": "trial-007",
+    "correct": true,
+    "setup": {
+      "seconds": 4.958271374998731,
+      "storage_bytes": 1624920
+    },
+    "samples": [
+      {
+        "seconds": 0.014270250008848961,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.01053821001551114,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.010278415989887435,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.00947958399046911,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.009204707981552929,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.008991081987915095,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.009204707981552929
+  },
+  {
+    "trial": 8,
+    "hypothesis": "Per-panel table with snappy at 65536-row groups: lighter I/O with cheap decode may beat uncompressed.",
+    "status": "discarded",
+    "score": 0.011256083009357098,
+    "running_best": 0.009295623989601154,
+    "directory": "trial-008",
+    "correct": true,
+    "setup": {
+      "seconds": 5.256837916000222,
+      "storage_bytes": 1377923
+    },
+    "samples": [
+      {
+        "seconds": 0.012460416990506928,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.011256083009357098,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.011031958012608811,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "incumbent_samples": [
+      {
+        "seconds": 0.012269915008801036,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.009252084026229568,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      },
+      {
+        "seconds": 0.009208498013322242,
+        "bytes_scanned": null,
+        "estimated_scan_usd": null
+      }
+    ],
+    "paired_incumbent_score": 0.009252084026229568
+  }
+]

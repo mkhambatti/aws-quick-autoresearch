@@ -1,0 +1,14 @@
+{
+  "run_id": "query-20261113-173728-e6a1d9",
+  "objective": "seconds",
+  "limits": {
+    "trials": 12,
+    "repeats": 3,
+    "query_timeout": 90,
+    "seconds": 3600
+  },
+  "minimum_gain": 0.03,
+  "spent_seconds": 227.6795814579964,
+  "planner": "AWS Quick, identified by operator-supplied conversation; run ledger does not authenticate the submitting client",
+  "environment_note": "Run performed on operator Mac. Environment below captured during publication preparation, not instrumented at original run time."
+}

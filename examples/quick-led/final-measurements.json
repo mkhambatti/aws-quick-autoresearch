@@ -1,0 +1,1922 @@
+[
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9875197919973289,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9844340830022702,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.0550700829990092,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.0425982500019018,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9791546249980456,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9865204579982674,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9762100419975468,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9571369999976014,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9907440840033814,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9911578750034096,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9898612500037416,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.984864917001687,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9587898750032764,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9870330830017338,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9849902919959277,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9950151670054765,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9711364160029916,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9507042500044918,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.983420083000965,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.976650000004156,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0013402920012595132,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008773750014370307,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007554580006399192,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007952079977258109,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006208749982761219,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007380409952020273,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000636124997981824,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007539580037700944,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006738750016666017,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006022500019753352,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006552080012625083,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006051669988664798,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000912832998437807,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007612089975737035,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006950000024517067,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003500829989206977,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.00031920900073600933,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003399580018594861,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.00038695900002494454,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0002858340012608096,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000712041997758206,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005848329965374433,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006372499992721714,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006516659996123053,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005872090041521005,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006534170024679042,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005889589956495911,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007946670011733659,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006584589937119745,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005696250009350479,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006895830010762438,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000559708998480346,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006199589988682419,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005698339955415577,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0005501249979715794,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003279169977759011,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003116250009043142,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.00032020800426835194,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003115419967798516,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0002935419979621656,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9976378749997821,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9887202919999254,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9775247500001569,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9885597079992294,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.983154250003281,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.984230000001844,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9817275419991347,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9578407090011751,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.029411583993351,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.0262049160010065,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9840958749991842,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9814197500018054,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9710964999976568,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.985632459000044,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.008125457999995,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9991828340062057,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.977035292002256,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9665476250011125,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.985861291999754,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.995369166994351,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9999360420042649,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 1.1703103330000886,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9552216250012862,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9912067920013214,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9734482499989099,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9887374169993564,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9793952079999144,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.973993875006272,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9799082919998909,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9890435419947607,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9965117499959888,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9842605840021861,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9615557920042193,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9887925419970998,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.991599209002743,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.99877587499941,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9801669170046807,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9707329590019071,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9884287919994676,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.9818112499997369,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "baseline"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0019489580008666962,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0009033750029630028,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007804170018061996,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.000824791997729335,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006610420023207553,
+    "bytes_scanned": null,
+    "case": 0,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008658749939058907,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008707079978194088,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007502090011257678,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007848340028431267,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006259159999899566,
+    "bytes_scanned": null,
+    "case": 1,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006886249975650571,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008651249954709783,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0008222910037147813,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0006609170013689436,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0007256660028360784,
+    "bytes_scanned": null,
+    "case": 2,
+    "query": "national_carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003662919989437796,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "routes",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.00036433299828786403,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "carriers",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0004272500009392388,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "departure_hours",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0003504999986034818,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "weekdays",
+    "role": "winner"
+  },
+  {
+    "columns": [
+      "dimension",
+      "flights",
+      "observed_arrivals",
+      "arrival_delay_minutes",
+      "delayed_flights",
+      "cancellations",
+      "diversions"
+    ],
+    "seconds": 0.0002884999994421378,
+    "bytes_scanned": null,
+    "case": 3,
+    "query": "national_carriers",
+    "role": "winner"
+  }
+]
