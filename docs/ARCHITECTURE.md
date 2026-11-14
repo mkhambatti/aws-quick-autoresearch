@@ -1,10 +1,10 @@
 # Technical design
 
-## Problem and intended outcome
+Quick proposes SQL rewrites and Parquet materializations through MCP. The owner supplies reference queries, a source snapshot, training and held-out cases, and a budget. The runner checks result equality and measures elapsed query time. The optional Athena adapter also supports bytes scanned as its objective.
 
-An assistant can propose a plausible SQL optimization without knowing whether it helps on the user's data. The owner also needs confidence that faster execution did not silently alter a business metric. This project turns a proposal into a bounded, repeatable experiment with a retained record of the outcome.
+## Autoresearch for analytics
 
-The unit of optimization is a workload: a named set of reference queries, training parameter cases, held-out parameter cases, and an immutable source snapshot. Success means reducing the registered objective while preserving checked answers. The local objective is elapsed query time; the optional Athena adapter also supports bytes scanned.
+Karpathy’s agent changes a training program, runs it for a fixed interval, and compares model validation scores. This project keeps the propose–evaluate–retain loop. The candidate is a set of SQL statements and an optional Parquet layout. Executing a candidate builds a table or reads rows. There is no gradient descent or model-weight update in the query runner. Its correctness decision is deterministic for the checked results, while timing can vary across repetitions. [Original autoresearch project](https://github.com/karpathy/autoresearch) · [Karpathy’s post](https://x.com/karpathy/status/2029701092347630069)
 
 ## Components and ownership
 
@@ -24,15 +24,14 @@ flowchart LR
 
 The owner selects the source and correctness contract. The assistant submits a hypothesis, a complete query mapping, and optional materialization SQL/settings. The assistant cannot change the registered source, limits, or evaluator through the MCP interface. Owner-level filesystem access can change them: this is interface isolation, not tamper-proof storage.
 
-## Run lifecycle
+## Experiment lifecycle
 
-Registration validates reference SQL, captures schema and row count, and hashes local data. A source is exposed under the relation name `data`. An optional candidate materialization is exposed as `cache` and belongs to that trial. Materializations are built from the original source, not from the previous trial's cache.
+1. **Define the reference.** Registration validates the workload SQL, records the local source schema and row count, and hashes the snapshot. The worker exposes the source as `data`. The baseline stores answer fingerprints on the training cases before scoring repeated baseline batches.
+2. **Propose a change.** Quick supplies a hypothesis and one query for each reference query name. It can also supply SQL and storage settings for a trial-specific Parquet file. The worker builds that file from `data`, exposes it as `cache`, and records build time and size.
+3. **Verify, then time.** The worker executes the candidate on all training cases and compares each result with the reference fingerprint. A mismatch records a rejection without a benchmark score. On a pass, it warms the incumbent and alternates candidate and incumbent execution order across repetitions. It rechecks answers during timed repetitions and applies the selection rule below.
+4. **Learn and finalize.** Quick reads the ledger and chooses its next hypothesis. At finalization the worker seals the run before loading the held-out cases. It recomputes the baseline answers, checks the winner, then times both implementations on that batch. Only a successful final verification produces a reported speedup and exported winner. A final mismatch records a failure and leaves the run sealed.
 
-A baseline generates reference fingerprints on training cases and measures repeated query batches. A candidate must supply exactly the baseline query names. The worker builds its optional cache, checks answers, warms the incumbent, and alternates candidate/incumbent measurement order. Jobs run in a child process. A nonblocking Unix file lock permits one worker per run; the client polls status until the lock is released and report generation finishes.
-
-The default run permits 12 records, **including the baseline**, three repetitions, 90 seconds per query, and 3,600 seconds of accumulated worker execution. The run budget is not an elapsed chat deadline: time between tool calls is not charged. Initialization, source inspection, and report rendering are not all strictly covered by the worker deadline. The 1 GB DuckDB setting is an engine memory budget, not an operating-system memory limit. Stop is cooperative: the current query ends or times out. No automatic stop-after-three rule exists in the engine; the Quick prompt supplies that policy.
-
-Finalization seals the run before opening held-out cases. It recomputes reference answers, checks the selected candidate, and remeasures baseline and winner with alternating order. Failure still seals the run. A failed winner must not be adopted; create a new run to investigate. The tool cannot silently reopen final cases for tuning.
+Jobs run in child processes. A nonblocking Unix file lock permits one worker per run. The client polls status through report generation and lock release. The defaults allow 12 trial records including the baseline, three timing repetitions, 90 seconds per query, and 3,600 seconds of accumulated worker time. Time between tool calls is outside the worker budget. DuckDB has a 1 GB engine memory budget. Stop requests take effect at query boundaries. The research prompt can ask Quick to stop after three consecutive non-improvements.
 
 ## Selection and correctness
 

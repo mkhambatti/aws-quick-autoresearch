@@ -48,6 +48,12 @@ def report(path):
     fig.savefig(path/'progress.png', dpi=170)
     fig.savefig(path/'progress.svg')
     plt.close(fig)
+    render_html(path, state)
+
+
+def render_html(path, state):
+    history = state['history']
+    metric = state['objective']
     e = html.escape
     final = read(path/'final.json') if (path/'final.json').exists() else None
     image = base64.b64encode((path/'progress.png').read_bytes()).decode()
@@ -56,7 +62,13 @@ def report(path):
     engine_label = 'Local DuckDB · no AWS charges measured' if local else 'Amazon Athena · service-reported metrics'
     stats = ''
     if final and final.get('correct_on_final_cases'):
-        stats = f'''<div class="metrics"><div><b>{final['speedup']:.1f}×</b><span>Final workload speedup</span></div><div><b>{final['baseline_seconds']:.3f}s → {final['winner_seconds']:.3f}s</b><span>Unseen cases · median of {state['limits']['repeats']} repeats</span></div><div><b>{final['setup_seconds']:.2f}s</b><span>Winner's one-time preparation</span></div><div><b>Passed</b><span>Exact answers on {final['test_cases']} final cases × {final['queries_per_case']} queries</span></div></div>'''
+        stats = f'''<table class="metrics"><caption>Held-out batch</caption><tbody>
+<tr><th scope="row">Query time</th><td>{final['baseline_seconds']:.4f}s → {final['winner_seconds']:.5f}s</td></tr>
+<tr><th scope="row">Speedup</th><td>{final['speedup']:,.1f}×</td></tr>
+<tr><th scope="row">Repetitions</th><td>Median of {state['limits']['repeats']} batch timings per implementation</td></tr>
+<tr><th scope="row">Verified answers</th><td>{final['test_cases']} held-out cases × {final['queries_per_case']} queries, all matched</td></tr>
+<tr><th scope="row">Preparation</th><td>{final['setup_seconds']:.3f}s</td></tr>
+</tbody></table>'''
     elif final:
         stats = '<p class="error">Final verification failed. Do not deploy this candidate.</p>'
     else:
@@ -72,9 +84,40 @@ def report(path):
     if winner.get('materialize'):
         details = '<details open><summary>One-time preparation SQL</summary><pre>'+e(winner['materialize']['sql'])+'</pre></details>'+details
     desc = f"{source.get('rows', 'Enterprise')} rows · {source.get('size_bytes', 0)/1e6:.1f} MB original input" if local else 'Snapshot: '+e(source['snapshot_id'])
-    provenance = 'Airline data: BTS / Data Expo 2009, UC Davis mirror. Historical benchmark; not live travel recommendations.' if state['workload']['name'] == 'Airline Delay Detective' else 'Source: user-registered workload and snapshot.'
+    provenance = 'Flight data from BTS / Data Expo 2009, UC Davis mirror.' if state['workload']['name'] == 'Airline Delay Detective' else 'Source: user-registered workload and snapshot.'
     payload = e(json.dumps(final, indent=2)) if final else 'Not finalized'
-    doc = f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quick Query Autoresearch</title>
-<style>body{{margin:0;background:#f5f7fa;color:#172338;font:16px/1.55 system-ui,sans-serif}}main{{max-width:1180px;margin:auto;padding:44px 24px}}h1{{font-size:44px;letter-spacing:-1.8px;line-height:1.1;margin:12px 0}}h2{{margin-top:36px;font-size:24px}}.tag{{color:#198761;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}}.sub,small{{color:#59677b}}small{{display:block}}.metrics{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}}.metrics div{{background:white;border:1px solid #e0e5eb;border-radius:12px;padding:20px}}.metrics b{{font-size:25px;display:block;color:#146247}}.metrics span{{font-size:12px;display:block;margin-top:7px}}img{{width:100%;border-radius:14px}}table{{width:100%;border-collapse:collapse;background:white;font-size:14px}}td,th{{padding:14px;border-bottom:1px solid #e3e8ee;text-align:left;vertical-align:top}}.kept{{color:#137a52}}.rejected,.error{{color:#b63c2d}}.discarded{{color:#687489}}details{{background:white;border:1px solid #e0e5eb;padding:14px;margin:8px 0;border-radius:8px}}summary{{cursor:pointer;font-weight:600}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}footer{{margin-top:30px;font-size:12px;color:#59677b}}@media(max-width:800px){{.metrics{{grid-template-columns:1fr 1fr}}h1{{font-size:34px}}table{{font-size:12px}}td,th{{padding:8px}}}}</style>
-<main><div class="tag">Quick Query Autoresearch / measured experiments</div><h1>Same answers.<br>Less waiting.</h1><p class="sub">{e(state['workload']['name'])} · {desc}<br>{engine_label}</p>{stats}<img alt="Measured experiment staircase" src="data:image/png;base64,{image}"><h2>Every attempt, including failures</h2><p>Objective: {metric}. Scores total all training cases and queries. Timings use warm caches; preprocessing, validation and LLM costs are separate. No fabricated delays or scores.</p><table><thead><tr><th>Trial</th><th>Decision</th><th>Score</th><th>Setup</th><th>Hypothesis</th></tr></thead><tbody>{rows}</tbody></table><h2>Winning implementation</h2>{details}<h2>Final verification</h2><details><summary>Measured results and break-even</summary><pre>{payload}</pre></details><footer>Run {e(state['id'])} · {state['spent_seconds']:.1f}s runner work. A finite test suite cannot prove correctness on every possible input. A declining best-so-far line is a selection rule, not a guarantee of future improvements. {provenance}</footer></main></html>'''
-    (path/'report.html').write_text(doc)
+    title = e(state['workload']['name'])
+    conditions = ('Local DuckDB with warm caches.' if local
+                  else 'Athena timings and scan counts come from the service.')
+    doc = f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title} · Experiment report</title>
+<style>
+* {{box-sizing:border-box}}
+body {{background:white;color:#191d21;font:16px/1.5 system-ui,sans-serif;margin:0}}
+main {{width:min(100% - 32px,1020px);margin:auto;padding:20px 0 32px}}
+header {{border-bottom:1px solid #191d21;padding-bottom:10px}}
+h1 {{font-size:clamp(28px,4vw,42px);line-height:1.15;letter-spacing:-.04em;margin:0 0 4px}}
+h2 {{font-size:22px;letter-spacing:-.025em;margin:20px 0 8px}}
+p {{margin:8px 0;max-width:85ch}} code,pre,.metrics td {{font-family:ui-monospace,monospace}}
+table {{border-collapse:collapse;width:100%;font-size:14px}}
+caption {{font-weight:650;font-size:18px;text-align:left;padding:12px 0 5px}}
+th,td {{text-align:left;vertical-align:top;border-bottom:1px solid #c6cbd1;padding:6px 10px}}
+.metrics {{border:1px solid #b9c0c6}} .metrics th {{width:24%}} .metrics td {{font-variant-numeric:tabular-nums}}
+.metrics tr:first-child td {{font-size:18px;font-weight:650}}
+.scroll {{overflow-x:auto}} .note,.error {{border-left:2px solid #747d86;padding-left:12px;color:#49515b}}
+small {{display:block}} details {{border-top:1px solid #c6cbd1;padding:7px 0}}
+summary {{cursor:pointer;color:#124c96}} :focus-visible {{outline:2px solid #124c96}}
+img {{width:100%;height:auto}} pre {{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}}
+footer {{border-top:1px solid #191d21;margin-top:20px;padding-top:10px;font-size:13px}}
+</style></head><body><main>
+<header><h1>{title}</h1><code>{e(state['id'])}</code><p>{engine_label} · {desc}</p></header>
+{stats}
+<p class="note">{conditions} The query-time ratio excludes preparation and research time. Answer checks cover the registered cases. Rebuild summaries after a source change.</p>
+<h2>Training trials</h2><p>Score in {e(metric)} across all training cases and queries. Rejected trials have no benchmark score.</p>
+<div class="scroll"><table><thead><tr><th>Trial</th><th>Decision</th><th>Score</th><th>Setup</th><th>Hypothesis</th></tr></thead><tbody>{rows}</tbody></table></div>
+<details><summary>Training chart</summary><img alt="Training scores and the running best by trial" src="data:image/png;base64,{image}"></details>
+<h2>Selected SQL</h2>{details}<h2>Final verification</h2>
+<details><summary>Batch samples and break-even calculation</summary><pre>{payload}</pre></details>
+<footer>{state['spent_seconds']:.1f}s recorded runner time. {provenance}</footer></main></body></html>'''
+    (path / 'report.html').write_text(doc)
