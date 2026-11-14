@@ -1,0 +1,22 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -c requirements-tested.txt '.[test]'
+      - run: python -m pytest -q
+      - name: Verify installed package outside checkout
+        run: cd /tmp && python -I -m quick_query.cli --help
+      - name: Build static results site
+        run: python scripts/build_site.py
