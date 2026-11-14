@@ -1,0 +1,14 @@
+{
+  "hypothesis": "Project nine required columns into uncompressed Parquet; avoid repeatedly parsing the original CSV.",
+  "queries": {
+    "routes": "SELECT Dest AS dimension, COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals,\n    SUM(ArrDelay) AS arrival_delay_minutes,\n    SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n    SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n    SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY Dest",
+    "carriers": "SELECT UniqueCarrier AS dimension, COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals,\n    SUM(ArrDelay) AS arrival_delay_minutes,\n    SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n    SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n    SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY UniqueCarrier",
+    "departure_hours": "SELECT FLOOR(CRSDepTime / 100.0) AS dimension, COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals,\n    SUM(ArrDelay) AS arrival_delay_minutes,\n    SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n    SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n    SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY FLOOR(CRSDepTime / 100.0)",
+    "weekdays": "SELECT DayOfWeek AS dimension, COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals,\n    SUM(ArrDelay) AS arrival_delay_minutes,\n    SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n    SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n    SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY DayOfWeek",
+    "national_carriers": "SELECT UniqueCarrier AS dimension, COUNT(*) AS flights, COUNT(ArrDelay) AS observed_arrivals,\n    SUM(ArrDelay) AS arrival_delay_minutes,\n    SUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS delayed_flights,\n    SUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancellations,\n    SUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diversions\nFROM cache WHERE Month = {{month}} GROUP BY UniqueCarrier"
+  },
+  "materialize": {
+    "sql": "SELECT Month, DayOfWeek, CRSDepTime, UniqueCarrier, ArrDelay, Origin, Dest, Cancelled, Diverted FROM data",
+    "compression": "uncompressed"
+  }
+}

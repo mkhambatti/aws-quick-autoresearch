@@ -1,0 +1,15 @@
+{
+  "hypothesis": "Sort the aggregate by month and origin with smaller row groups.",
+  "queries": {
+    "routes": "SELECT Dest AS dimension, SUM(n) AS flights, SUM(observed) AS observed_arrivals,\n    SUM(delay_sum) AS arrival_delay_minutes,\n    SUM(late) AS delayed_flights,\n    SUM(cancelled_n) AS cancellations,\n    SUM(diverted_n) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY Dest",
+    "carriers": "SELECT UniqueCarrier AS dimension, SUM(n) AS flights, SUM(observed) AS observed_arrivals,\n    SUM(delay_sum) AS arrival_delay_minutes,\n    SUM(late) AS delayed_flights,\n    SUM(cancelled_n) AS cancellations,\n    SUM(diverted_n) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY UniqueCarrier",
+    "departure_hours": "SELECT departure_hour AS dimension, SUM(n) AS flights, SUM(observed) AS observed_arrivals,\n    SUM(delay_sum) AS arrival_delay_minutes,\n    SUM(late) AS delayed_flights,\n    SUM(cancelled_n) AS cancellations,\n    SUM(diverted_n) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY departure_hour",
+    "weekdays": "SELECT DayOfWeek AS dimension, SUM(n) AS flights, SUM(observed) AS observed_arrivals,\n    SUM(delay_sum) AS arrival_delay_minutes,\n    SUM(late) AS delayed_flights,\n    SUM(cancelled_n) AS cancellations,\n    SUM(diverted_n) AS diversions\nFROM cache WHERE Month = {{month}} AND Origin = {{origin}}\nGROUP BY DayOfWeek",
+    "national_carriers": "SELECT UniqueCarrier AS dimension, SUM(n) AS flights, SUM(observed) AS observed_arrivals,\n    SUM(delay_sum) AS arrival_delay_minutes,\n    SUM(late) AS delayed_flights,\n    SUM(cancelled_n) AS cancellations,\n    SUM(diverted_n) AS diversions\nFROM cache WHERE Month = {{month}} GROUP BY UniqueCarrier"
+  },
+  "materialize": {
+    "sql": "SELECT Month, Origin, Dest, UniqueCarrier, DayOfWeek, FLOOR(CRSDepTime/100.0) AS departure_hour,\nCOUNT(*) AS n, COUNT(ArrDelay) AS observed, SUM(ArrDelay) AS delay_sum,\nSUM(CASE WHEN ArrDelay >= 15 THEN 1 ELSE 0 END) AS late,\nSUM(CASE WHEN Cancelled = 1 THEN 1 ELSE 0 END) AS cancelled_n,\nSUM(CASE WHEN Diverted = 1 THEN 1 ELSE 0 END) AS diverted_n\nFROM data GROUP BY Month, Origin, Dest, UniqueCarrier, DayOfWeek, FLOOR(CRSDepTime/100.0) ORDER BY Month, Origin",
+    "compression": "zstd",
+    "row_group_size": 16384
+  }
+}
