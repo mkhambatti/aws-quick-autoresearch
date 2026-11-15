@@ -1,10 +1,10 @@
 # aws-quick-autoresearch
 
-Give AWS Quick a slow dashboard and the answers it should return. Quick tries a shortcut, like counting flights by route ahead of time. A local program checks the answers and measures the speed. Quick uses that result to decide what to try next. That loop is autoresearch.
+Which destinations had the most late flights out of Chicago? The original dashboard counted through seven million flight records to answer questions like this. AWS Quick tried ways to do the counting ahead of time. A local program checked every answer and timed each idea. The same 20 queries went from 19.77 seconds to 13 milliseconds.
 
 `v0.1.0` · Python 3.11–3.13 · Local DuckDB · MIT
 
-[ELI5 walkthrough](docs/ELI5.md) · [Watch the before and after](https://mkhambatti.github.io/aws-quick-autoresearch/#replay) · [Benchmark and trial history](https://mkhambatti.github.io/aws-quick-autoresearch/) · [Technical design](docs/ARCHITECTURE.md) · [Connect Quick](docs/QUICK.md)
+[ELI5 walkthrough](docs/ELI5.md) · [Open the flight operations dashboard](https://mkhambatti.github.io/aws-quick-autoresearch/flight-operations.html) · [Benchmark and trial history](https://mkhambatti.github.io/aws-quick-autoresearch/) · [Technical design](docs/ARCHITECTURE.md) · [Connect Quick](docs/QUICK.md)
 
 ## Try it without an AWS account
 

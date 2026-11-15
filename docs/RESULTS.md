@@ -36,6 +36,12 @@ The starting point is a 689 MB CSV with repeated parsing and scans. The winner r
 
 The source has 7,009,728 actual flight records; no duplicated rows were added to claim scale. Held-out parameters are withheld from MCP responses before finalization, but an owner with filesystem access can read them. The evaluator is fixed through this interface, not cryptographically immutable.
 
+## Flight operations dashboard
+
+The [monthly dashboard](https://mkhambatti.github.io/aws-quick-autoresearch/flight-operations.html) shows the three populated final cases. Its replay includes the fourth, empty case. Each panel appears at the cumulative query time from the recorded median repetition for that version. The page opens with the completed Chicago report.
+
+To reproduce the [chart data](../examples/quick-led/dashboard-preview.json), run the five reference queries with each populated test case in [workload.json](../examples/quick-led/workload.json). The displayed values were checked against the same queries from [winner.json](../examples/quick-led/winner.json) on the original snapshot. The headline counts sum the route rows. Routes rank by late arrivals, airlines by cancellations, and ties sort by code. The page shows the first three in each ranking. Hour and weekday panels show counts for the entire selected airport and month. The nationwide airline panel includes every origin.
+
 ## Earlier scripted evidence
 
 The original Linux demonstration (`query-20261112-204646-e020aa`) used predefined proposals. It measured 30.299964315 → 0.108952640 seconds (278.10×), with 3.177320071 seconds of setup. Its nine records include an intentionally wrong proposal that was rejected. [Inspect its report](../examples/measured/report.html) and [environment](../examples/tested-environment.json).

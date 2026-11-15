@@ -1,54 +1,66 @@
-// Replay cumulative query times from the two measured median batches.
-const replay = document.querySelector('#replay');
-const panels = Array.from(replay.querySelectorAll('figure'), figure => ({
-  times: JSON.parse(figure.dataset.times),
-  clock: figure.querySelector('.clock'),
-  finalTime: figure.querySelector('.clock').textContent,
-  bars: figure.querySelector('.bars'),
-  waiting: figure.querySelector('.waiting'),
-  count: figure.querySelector('.query-count'),
-}));
-const controls = replay.querySelector('.replay-controls');
-const play = controls.querySelector('#play');
-const finish = controls.querySelector('#finish');
-const status = controls.querySelector('[role=status]');
-const duration = Math.max(...panels.map(panel => panel.times.at(-1)));
-let frame;
+const traces = JSON.parse(document.querySelector('#trace').textContent);
+const reports = [...document.querySelectorAll('article[data-case]')];
+const airport = document.querySelector('#airport');
+const progress = document.querySelector('progress');
+const label = document.querySelector('#progress');
+const status = document.querySelector('[role=status]');
+const skip = document.querySelector('#skip');
+let role = 'winner';
+let completed = traces.winner.length;
+let timer;
 
-function show(seconds) {
-  for (const panel of panels) {
-    const completed = panel.times.filter(end => end <= seconds).length;
-    const ready = completed === panel.times.length;
-    panel.clock.textContent = ready ? panel.finalTime : seconds.toFixed(1) + ' s';
-    panel.count.textContent = completed + ' of ' + panel.times.length + ' queries finished';
-    panel.bars.hidden = !ready;
-    panel.waiting.hidden = ready;
+for (const value of document.querySelectorAll('.totals dd')) {
+  value.dataset.result = value.textContent;
+}
+
+function draw() {
+  const trace = traces[role];
+  const report = reports.find(item => item.dataset.case === airport.value);
+  for (const item of reports) item.hidden = item !== report;
+  const ready = new Set(trace.slice(0, completed)
+    .filter(([index]) => index === Number(airport.value)).map(([, query]) => query));
+  for (const panel of report.querySelectorAll('.panel')) {
+    const available = ready.has(panel.dataset.query);
+    panel.querySelector('.answer').hidden = !available;
+    panel.querySelector('.pending').hidden = available;
   }
+  for (const value of report.querySelectorAll('.totals dd')) {
+    value.textContent = ready.has('routes') ? value.dataset.result : '…';
+  }
+  const mode = role === 'baseline' ? 'Before' : 'After';
+  label.textContent = mode + ' · ' + completed + ' of ' + trace.length + ' queries finished';
+  progress.value = completed;
+  skip.disabled = completed === trace.length;
 }
 
-function showBoth() {
-  cancelAnimationFrame(frame);
-  show(duration);
-  status.textContent = 'Both batches finished. The flight counts match.';
-}
-
-finish.addEventListener('click', showBoth);
-play.addEventListener('click', () => {
-  cancelAnimationFrame(frame);
+function play(nextRole) {
+  clearTimeout(timer);
+  role = nextRole;
+  completed = 0;
+  const trace = traces[role];
   const start = performance.now();
-  status.textContent = 'Replaying both batches at recorded speed.';
-  function tick(now) {
-    const elapsed = (now - start) / 1000;
-    if (elapsed >= duration) {
-      showBoth();
-      return;
+  status.textContent = role === 'baseline' ? 'Replaying original queries.' : 'Replaying prepared totals.';
+  function advance() {
+    const elapsed = performance.now() - start;
+    while (completed < trace.length && trace[completed][2] * 1000 <= elapsed) completed++;
+    draw();
+    if (completed < trace.length) {
+      timer = setTimeout(advance, Math.ceil(trace[completed][2] * 1000 - elapsed));
+    } else {
+      status.textContent = 'All reports are ready.';
     }
-    show(elapsed);
-    frame = requestAnimationFrame(tick);
   }
-  tick(start);
-});
+  advance();
+}
 
-show(2);
-status.textContent = 'Paused at 2 seconds. The prepared batch has finished.';
-controls.hidden = false;
+airport.addEventListener('change', draw);
+document.querySelector('#before').addEventListener('click', () => play('baseline'));
+document.querySelector('#after').addEventListener('click', () => play('winner'));
+skip.addEventListener('click', () => {
+  clearTimeout(timer);
+  completed = traces[role].length;
+  draw();
+  status.textContent = 'Showing all completed answers.';
+});
+for (const control of document.querySelectorAll('.controls')) control.hidden = false;
+draw();

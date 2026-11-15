@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight operations · Monthly performance</title>
+  <link rel="stylesheet" href="flight-operations.css">
+  <script defer src="replay.js"></script>
+</head>
+<body>
+  <a class="skip" href="#reports">Skip to airport report</a>
+  <header><div class="wrap mast"><strong><span class="runway" aria-hidden="true"></span>Flight operations</strong><nav><a href="index.html#evidence">Benchmark &amp; trials</a><a href="https://github.com/@@REPO@@/blob/main/docs/ELI5.md">How it works</a></nav></div></header>
+  <main class="wrap">
+    <div class="heading"><div><h1>Monthly flight performance</h1><p>Delays and cancellations for flights departing U.S. airports in 2008.</p></div>
+      <label class="controls" hidden>Airport &amp; reporting month<select id="airport">@@OPTIONS@@</select></label>
+    </div>
+    <aside aria-label="Compare report refresh times">
+      <div class="refresh"><div><h2>Compare refresh times</h2><p>Before, each chart counted flights from scratch. Quick found a way to prepare the totals once.<br>Replay all 20 queries to see when each answer was ready.</p></div>
+        <div class="actions controls" hidden><button id="before" type="button">Replay before <b>@@BASELINE@@</b></button><button id="after" type="button">Replay after <b>@@WINNER@@</b></button></div>
+      </div>
+      <div class="playback controls" hidden><progress max="20" value="20" aria-label="Queries finished"></progress><span id="progress">20 of 20 queries finished</span><button id="skip" type="button" disabled>Skip to results</button></div>
+      <span class="sr" role="status"></span>
+      <noscript>The original batch took @@BASELINE@@. The prepared totals took @@WINNER@@. Chicago’s completed report is shown below.</noscript>
+    </aside>
+    <div id="reports">@@REPORTS@@</div>
+    <footer><p>Late means arriving at least 15 minutes after schedule. Cancellations are counted separately.</p><p>Historical U.S. flight records. The clock replays local, warm-cache query times for three airport reports and one empty-result check. Preparing the totals took 5.117 seconds. Browser drawing time is excluded. <a href="results/quick-led/dashboard-preview.json">Chart data</a> · <a href="results/quick-led/final-measurements.json">Recorded timings</a> · <a href="https://github.com/@@REPO@@/blob/main/DATA_SOURCES.md">Data source</a></p></footer>
+  </main>
+  <script type="application/json" id="trace">@@TRACE@@</script>
+</body>
+</html>

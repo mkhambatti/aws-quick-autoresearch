@@ -56,23 +56,6 @@
     details { margin: 12px 0 0; }
     summary { cursor: pointer; color: var(--accent); width: fit-content; }
     figure { margin: 10px 0; }
-    .comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--rule); }
-    .comparison figure { margin: 0; padding: 12px 15px; }
-    .comparison figure + figure { border-left: 1px solid var(--rule); }
-    .comparison figcaption { color: var(--ink); font-size: 15px; font-weight: 650; }
-    .comparison .clock { display: block; font: 600 23px/1.4 var(--mono); }
-    .result-area { min-height: 5rem; display: grid; align-content: center; }
-    .bars { padding: 0; margin: 0; list-style: none; }
-    .bars li { display: grid; grid-template-columns: 3ch 1fr 4ch; align-items: center; gap: 10px; font: 14px/1.6 var(--mono); }
-    .bars li > :last-child { text-align: right; }
-    .track { border-left: 1px solid var(--rule); }
-    .track i { display: block; height: 8px; background: var(--accent); }
-    .waiting, .query-count, .replay-controls { font-size: 14px; }
-    .waiting, .query-count { color: var(--muted); }
-    .replay-controls { margin: 12px 0; }
-    button { font: inherit; cursor: pointer; background: white; color: var(--accent); border: 1px solid var(--rule); padding: 5px 10px; }
-    button:disabled { cursor: default; color: var(--muted); }
-    .replay-controls span { display: block; margin-top: 4px; }
     img { width: 100%; height: auto; display: block; }
     dl { margin: 12px 0; }
     dl > div { display: grid; grid-template-columns: 7rem 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid #d5d9dd; }
@@ -86,8 +69,6 @@
       .bench th { width: 30%; }
       .bench tr:first-child td { font-size: 17px; }
       dl > div { grid-template-columns: 4.7rem 1fr; gap: 8px; }
-      .comparison figure { padding: 8px; }
-      .bars li { gap: 4px; }
     }
   </style>
 </head>
@@ -104,35 +85,11 @@
       <h1>SQL workload optimization with AWS Quick</h1>
       <p class="meta"><code>@@DIRECTORY@@ // v0.1.0</code></p>
       <p>Quick proposes changes to SQL and Parquet summaries through MCP. A local runner checks each proposal against the original answers, times the candidates that pass, and returns the results to Quick for the next experiment.</p>
-      <div class="links"><a href="#replay">Watch the before and after</a><a href="https://github.com/@@REPO@@/blob/main/docs/ELI5.md">ELI5 walkthrough</a></div>
+      <div class="links"><a id="replay" href="flight-operations.html">Open the flight operations dashboard</a><a href="https://github.com/@@REPO@@/blob/main/docs/ELI5.md">ELI5 walkthrough</a></div>
     </div>
     <section id="evidence">
       <h2>Flight workload benchmark</h2>
       <p>Five dashboard queries repeatedly scanned a 689 MB CSV containing 7,009,728 flights. Trial 5 prepared each panel’s totals once and stored them in a single Parquet file.</p>
-      <div id="replay">
-        <h3>How soon are the answers ready?</h3>
-        <p>The same 20 queries took <strong>19.77 seconds</strong> before and <strong>13 milliseconds</strong> after. Replay the recorded times below. Each finished batch reveals the three destinations with the most late arrivals from Chicago O’Hare in February 2008 (at least 15 minutes late).</p>
-        <div class="comparison">
-          <figure data-times="@@BASELINE_TIMES@@">
-            <figcaption>Before · Read CSV</figcaption>
-            <span class="clock">@@BASELINE@@ s</span>
-            <div class="result-area"><span class="waiting" hidden>Reading flight records…</span><ul class="bars" aria-label="Late arrivals by destination">@@BARS@@</ul></div>
-            <span class="query-count">20 of 20 queries finished</span>
-          </figure>
-          <figure data-times="@@WINNER_TIMES@@">
-            <figcaption>After · Read totals</figcaption>
-            <span class="clock">@@WINNER@@ s</span>
-            <div class="result-area"><span class="waiting" hidden>Reading prepared totals…</span><ul class="bars" aria-label="Late arrivals by destination">@@BARS@@</ul></div>
-            <span class="query-count">20 of 20 queries finished</span>
-          </figure>
-        </div>
-        <div class="replay-controls" hidden>
-          <button type="button" id="play">Replay from start</button>
-          <button type="button" id="finish">Show both charts</button>
-          <span role="status"></span>
-        </div>
-        <p class="meta">Local DuckDB with a warm cache. The clocks exclude browser rendering and the @@SETUP@@ seconds spent preparing the totals. <a href="results/quick-led/final-measurements.json">Recorded timings</a> · <a href="results/quick-led/route-preview.json">Chart values</a></p>
-      </div>
       <table class="bench" aria-label="Held-out benchmark measurements"><tbody>
         <tr><th scope="row">Batch latency</th><td class="number">@@BASELINE@@s → @@WINNER@@s</td></tr>
         <tr><th scope="row">Speedup</th><td><span class="number">@@SPEEDUP@@×</span> on the held-out batch</td></tr>
@@ -174,7 +131,7 @@ bash scripts/setup.sh
       <div class="links"><a href="https://github.com/@@REPO@@/blob/main/docs/WORKLOADS.md">Register a dataset</a><a href="https://github.com/@@REPO@@/blob/main/docs/QUICK.md">Connect Quick</a></div>
     </section>
   </main>
-  <script defer src="replay.js"></script>
+  <script>if (location.hash === "#replay") location.replace("flight-operations.html");</script>
   <footer>Saved benchmark results · Independent MIT-licensed project · <a href="https://github.com/@@REPO@@/blob/main/DATA_SOURCES.md">Flight data attribution</a></footer>
 </body>
 </html>
