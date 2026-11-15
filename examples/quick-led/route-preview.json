@@ -1,0 +1,22 @@
+{
+  "query": "routes",
+  "case": {
+    "month": 2,
+    "origin": "ORD"
+  },
+  "selection": "First three destinations by delayed_flights descending, then dimension ascending",
+  "routes": [
+    {
+      "destination": "LGA",
+      "delayed_flights": 369
+    },
+    {
+      "destination": "DFW",
+      "delayed_flights": 276
+    },
+    {
+      "destination": "EWR",
+      "delayed_flights": 258
+    }
+  ]
+}
